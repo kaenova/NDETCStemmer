@@ -4,25 +4,18 @@ with open("README.md", "r", encoding='utf-8') as fh:
     long_description = fh.read()
 
 setuptools.setup(
-name='NDETCStemmer',  
+name='NDETCStemmer_kaenova',  
 version='1.3.0',
 py_modules=['NDETCStemmer'] ,
 description="Library untuk stemming kata dalam Bahasa Indonesia menggunakan metode Nondeterministic Context",
 long_description=long_description,
 long_description_content_type="text/markdown",
-url="https://github.com/alifadwitiyap/NDETCStemmer",
+url="https://github.com/kaenova/NDETCStemmer",
 packages=setuptools.find_packages(),
 include_package_data=True,
 zip_safe=False,
 classifiers=[
-	# How mature is this project? Common values are
-	#   3 - Alpha
-	#   4 - Beta
-	#   5 - Production/Stable
-	'Development Status :: 3 - Alpha',
-	# that you indicate whether you support Python 2, Python 3 or both.
-		"Programming Language :: Python :: 3",
-		# Indicate who your project is intended for
+	"Programming Language :: Python :: 3",
 	'Intended Audience :: Information Technology',
 	'Intended Audience :: Science/Research',
 	'Topic :: Text Processing :: Linguistic',

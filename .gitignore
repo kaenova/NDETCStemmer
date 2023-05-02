@@ -6,3 +6,6 @@ __pycache__
 venv
 *.ipynb
 Model
+dist
+build
+*.egg-info
