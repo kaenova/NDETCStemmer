@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="NDETCStemmer_kaenova",
-    version="1.4.2",
+    version="1.4.3",
     py_modules=["NDETCStemmer"],
     description="Library untuk stemming kata dalam Bahasa Indonesia menggunakan metode Nondeterministic Context",
     long_description=long_description,

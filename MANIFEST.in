@@ -1,1 +1,1 @@
-recursive-include NDETCStemmer *
+recursive-include src/NDETCStemmer *

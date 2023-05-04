@@ -2,7 +2,7 @@ req:
 	pip install -r requirements.txt
 
 lib:
-	pip install .
+	pip install --upgrade .
 
 upload:
 	twine upload dist/*
