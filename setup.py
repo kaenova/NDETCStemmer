@@ -5,7 +5,7 @@ with open("README.md", "r", encoding='utf-8') as fh:
 
 setuptools.setup(
 name='NDETCStemmer_kaenova',  
-version='1.3.0',
+version='1.4.0',
 py_modules=['NDETCStemmer'] ,
 description="Library untuk stemming kata dalam Bahasa Indonesia menggunakan metode Nondeterministic Context",
 long_description=long_description,
@@ -26,6 +26,7 @@ install_requires=[
 	'nltk',
 	'gensim',
 	'gdown',
-	'checksumdir'
+	'checksumdir',
+	'huggingface_hub'
 ]
 )

@@ -1,3 +1,4 @@
 gdown
 checksumdir
 tqdm
+huggingface_hub 

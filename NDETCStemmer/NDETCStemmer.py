@@ -1,15 +1,14 @@
 
-from NDETCStemmer.NDETCStemmerAbstract import NDETCStemmerAbstract
-from NDETCStemmer.Utility import normalizer
-from NDETCStemmer.BestWordSelector import BestWordSelector
-from NDETCStemmer.CandidateGenerator import CandidateGenerator 
-from NDETCStemmer.ModelDownloader import ModelDownloader
-from NDETCStemmer.ModelDownloader import CustomModelDownloader
+from .NDETCStemmerAbstract import NDETCStemmerAbstract
+from .Utility import normalizer
+from .BestWordSelector import BestWordSelector
+from .CandidateGenerator import CandidateGenerator 
+from .ModelDownloader import ModelDownloaderAbstract, HuggingfaceModelDownloader
 from typing import Optional
 import os
 
 class NDETCStemmer(NDETCStemmerAbstract):
-	def __init__(self,weight=1, left_context=1, right_context=1, parent=True, custom_downloader: Optional[CustomModelDownloader] = None):
+	def __init__(self,weight=1, left_context=1, right_context=1, parent=True, downloader: Optional[ModelDownloaderAbstract] = HuggingfaceModelDownloader()):
 		"""
 		# weight               weight similarity  
 		# left_context          maximum left context to eval
@@ -26,12 +25,9 @@ class NDETCStemmer(NDETCStemmerAbstract):
 		self._right_context=right_context
 		self._parent=parent
 		
-		downloader = ModelDownloader()
-		if custom_downloader is not None:
-			downloader = custom_downloader
-		downloader.run()
+		model_path = downloader.download_model()
 		self.path=os.path.dirname(__file__) 
-		self.model=os.path.join(self.path,'Model','w2vec_wiki_id_case')
+		self.model=model_path.w2vec_wiki_id_case
 		self.rootWord=os.path.join(self.path,'DictFile','root_word.txt')
 		self.rareWord=os.path.join(self.path,'DictFile','rare_word.txt')
 		self.compoundWord=os.path.join(self.path,'DictFile','compound_word.txt')
