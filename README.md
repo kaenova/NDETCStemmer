@@ -1,5 +1,7 @@
 # Nondeterministic Context (NDETC) Stemmer
 
+**This is Kaenova's maintained NDETCStemmer, a fork from the [original](https://github.com/alifadwitiyap/NDETCStemmer)**
+
 Nondeterministic Context (NDETC) Stemmer adalah library yang mengimplementasikan metode stemming nondeterministic berbasis context untuk memecahkan permasalahan kata-kata ambigu (bermakna lebih dari satu) morfologis pada proses stemming kata dalam bahasa Indonesia.
 
 ## Installation
