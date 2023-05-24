@@ -1,5 +1,7 @@
 # Nondeterministic Context (NDETC) Stemmer
 
+[![Open in Spaces](https://huggingface.co/datasets/huggingface/badges/raw/main/open-in-hf-spaces-sm.svg)](https://huggingface.co/spaces/kaenova/ndetc_stemmer_space)
+
 **This is Kaenova's maintained NDETCStemmer, a fork from the [original](https://github.com/alifadwitiyap/NDETCStemmer). I upload the model to Huggingface for model reliability.**
 
 Nondeterministic Context (NDETC) Stemmer adalah library yang mengimplementasikan metode stemming nondeterministic berbasis context untuk memecahkan permasalahan kata-kata ambigu (bermakna lebih dari satu) morfologis pada proses stemming kata dalam bahasa Indonesia.
